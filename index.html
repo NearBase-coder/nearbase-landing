@@ -1,248 +1,145 @@
-[10:16 PM, 9/4/2025] Manish Thakurela: !DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NearBase Landing</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    /* Navbar */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 15px 20px;
-      background: rgba(0,0,0,0.7);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-    nav h2 { font-size: 1.5rem; color: #ffcc00; }
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-
-    /* Hero */
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-      background: rgba(0,0,0,0.5);
-    }
-    header h1 {
-      font-size: 3.5rem;
-      color: #ffcc00;
-      animation: fadeInDown 2s;
-    }
-    header p {
-      font-size: 1.3rem;
-      margin: 15px 0;
-      animation: fadeInUp 2s;
-    }
-    header button {
-      margin-top: 20px;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 30px;
-      background: #ffcc00;
-      font-size: 1rem;
-      cursor: pointer;
-      color: #000;
-      transition: 0.3s;
-    }
-    header button:hover {
-      background: #ffaa00;
-      transform: scale(1.1);
-    }
-
-    /* Section General */
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #ffcc00;
-    }
-    section p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: #ddd;
-    }
-
-    /* Features */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .card {
-      background: rgba(255,255,255,0.1);
-      border-radius: 20px;
-      padding: 25px;
-      transition: 0.3s;
-      animation: zoomIn 2s;
-    }
-    .card:hover {
-      transform: translateY(-10px) scale(1.05);
-      background: rgba(255,255,255,0.15);
-    }
-    .card img {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 15px;
-    }
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #ffcc00;
-    }
-    .card p {
-      font-size: 1rem;
-      color: #ddd;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.8);
-      font-size: 0.9rem;
-    }
-
-    /* Responsive nav (hamburger) */
-    @media(max-width: 768px) {
-      nav ul { display: none; }
-    }
-  </style>
+  <title>Nearbase</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Navbar -->
-  <nav>
-    <h2>NearBase</h2>
-    <ul>
-      <li><a href="#problem">Problem</a></li>
-      <li><a href="#customers">Customers</a></li>
-      <li><a href="#vendors">Vendors</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#coming">Coming Soon</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <header>
-    <h1 class="animate_animated animate_fadeInDown">🚀 NearBase</h1>
-    <p class="animate_animated animate_fadeInUp">Digital Bridge between Customers & Shop Owners</p>
-    <button>Preorder Now</button>
+  <header class="navbar">
+    <div class="logo">Nearbase</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#problems">Problems</a>
+      <a href="#solution">Solution</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
-  <!-- Problem Faced -->
-  <section id="problem">
-    <h2>Problem We Solve</h2>
-    <p>Customers waste time searching for shops & products. Vendors struggle to connect digitally with customers. NearBase solves this by building a smooth digital bridge.</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Nearbase</h1>
+      <p class="tagline">Skip the wait.Enjoy the taste.</p>
+      <p class="coming-soon">Coming Soon</p>
+    </div>
   </section>
 
-  <!-- Customer Features -->
-  <section id="customers">
-    <h2>For Customers</h2>
-    <div class="features">
-      <div class="card">
-        <img src="https://via.placeholder.com/70" alt="Feature 1">
-        <h3>Easy Preorder</h3>
-        <p>Book products online before visiting shop.</p>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Nearbase</h2>
+      <p>
+        India’s first app that helps you pre-order from local favourite food shops.  
+        Beat the crowd, skip the noise, and save your time.  
+        This app is for both customers and shop owners.
+      </p>
+    </div>
+    <div class="about-image">
+      <a href="https://ibb.co/WWFhMwHB"><img src="https://i.ibb.co/C5vcYZwV/1757063922403.png" alt="1757063922403" border="0"></a>" alt="About Nearbase">
+    </div>
+  </section>
+
+  <!-- Problems Section -->
+  <section id="problems" class="problems">
+    <h2 class="section-heading primary">The Everyday Struggle</h2>
+    <p class="section-desc">Eating out sounds fun, but here’s what really happens…</p>
+    <div class="problem-boxes">
+      <div class="problem-box">
+        <h3 class="primary">Customer Problems</h3>
+        <ul>
+          <li>⏱ Long queues, peak hour delays</li>
+          <li>🔍 Hard to find best vendors</li>
+          <li>⏰ Shop timings unclear</li>
+          <li>😓 Noisy and crowded shops</li>
+        </ul>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/70" alt="Feature 2">
-        <h3>Quick Search</h3>
-        <p>Find shops nearby instantly with categories.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/70" alt="Feature 3">
-        <h3>Best Deals</h3>
-        <p>Access exclusive discounts and offers.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/70" alt="Feature 4">
-        <h3>Digital Bills</h3>
-        <p>Get bills & history digitally stored safely.</p>
+      <div class="problem-box">
+        <h3 class="primary">Vendor Problems</h3>
+        <ul>
+          <li>📝 Slower service due to manual orders</li>
+          <li>📉 No record of sales or customers</li>
+          <li>🌐 Zero digital presence</li>
+          <li>🥺 Fewer orders, low reach</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Vendor Features -->
-  <section id="vendors">
-    <h2>For Shop Owners</h2>
-    <div class="features">
-      <div class="card">
-        <img src="https://via.placeholder.com/70" alt="Feature 1">
-        <h3>Digital Shop</h3>
-        <p>Create online presence in minutes.</p>
+  <!-- Solution Section -->
+  <section id="solution" class="solution">
+    <p class="hook">The wait ends here. Nearbase solves it all.</p>
+    <h2 class="primary">Our Solution</h2>
+    <p class="solution-text">
+      One app for both sides:  
+      Customers skip the wait, vendors grow smarter with digital orders and sales data.
+    </p>
+    <div class="solution-images">
+      <img src="img/solution1.jpg" alt="Solution Image 1">
+      <img src="img/solution2.jpg" alt="Solution Image 2">
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2 class="primary">Customer Features</h2>
+    <div class="feature-grid">
+      <div class="feature-box">
+        <h3>Skip the Wait</h3>
+        <p>Pre-order food and pick it up without waiting.</p>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/70" alt="Feature 2">
-        <h3>Customer Insights</h3>
-        <p>Track customer activity & boost sales.</p>
+      <div class="feature-box">
+        <h3>All Vendors at One Place</h3>
+        <p>Discover nearby shops and their details instantly.</p>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/70" alt="Feature 3">
-        <h3>Inventory Control</h3>
-        <p>Manage stock & preorders in one dashboard.</p>
+      <div class="feature-box">
+        <h3>Live Shop Details</h3>
+        <p>Check timings and availability before stepping out.</p>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/70" alt="Feature 4">
-        <h3>Payments</h3>
-        <p>Accept secure online & offline payments.</p>
+      <div class="feature-box">
+        <h3>Easy Ordering</h3>
+        <p>Place orders in a few clicks. Stay updated and notified.</p>
+      </div>
+    </div>
+
+    <h2 class="primary vendor-heading">Vendor Features</h2>
+    <div class="feature-grid">
+      <div class="feature-box">
+        <h3>Digitalise Your Shop</h3>
+        <p>Bring your business online and showcase it to a wider audience.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Get More Orders</h3>
+        <p>Attract more customers with the pre-order system.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Analytics & Dashboard</h3>
+        <p>Track sales, customers, and growth in one place.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Common Tools</h3>
+        <p>Set timings, manage reviews, upload offers & product lists.</p>
       </div>
     </div>
   </section>
 
-  <!-- About Us -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>NearBase is built to empower both customers and local shop owners. Our mission is to simplify shopping and digitalize small businesses with ease and trust.</p>
-  </section>
-
-  <!-- Coming Soon -->
-  <section id="coming">
-    <h2>Coming Soon</h2>
-    <p>Exciting features and mobile app launch are on the way. Stay tuned for updates and join the revolution of digital shopping with NearBase.</p>
+  <!-- Coming Soon Section -->
+  <section class="coming">
+    <img src="img/coming.jpg" alt="Coming Soon">
+    <p class="coming-text primary">Coming in your area this October. Stay tuned!</p>
   </section>
 
   <!-- Footer -->
-  <footer id="contact">
-    © 2025 NearBase — All Rights Reserved.
+  <footer id="contact" class="footer">
+    <p>Contact us: nearbase@example.com</p>
+    <p>Follow us on social media (links coming soon)</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
