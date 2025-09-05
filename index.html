@@ -3,141 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nearbase</title>
+  <title>NearBase</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">Nearbase</div>
-    <nav class="nav-links" id="navLinks">
+    <div class="logo">NearBase</div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav class="nav-links" id="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#problems">Problems</a>
-      <a href="#solution">Solution</a>
-      <a href="#features">Features</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#customers">Customers</a>
+      <a href="#vendors">Vendors</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="home" class="hero">
+    <a href="https://ibb.co/PsrtJ1f2"><img src="https://i.ibb.co/BHfwvTSh/file-00000000f0e4622f9788efa3e4af2121.png" alt="file-00000000f0e4622f9788efa3e4af2121" border="0"></a> 
     <div class="hero-content">
-      <h1>Nearbase</h1>
-      <p class="tagline">Skip the wait.Enjoy the taste.</p>
-      <p class="coming-soon">Coming Soon</p>
+      <h1>NearBase</h1>
+      <p class="tagline">Skip the wait. Enjoy the taste.</p>
+      <div class="coming-soon">Coming Soon</div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="about">
     <div class="about-text">
-      <h2>About Nearbase</h2>
+      <h2>About NearBase App</h2>
       <p>
-        India’s first app that helps you pre-order from local favourite food shops.  
-        Beat the crowd, skip the noise, and save your time.  
+        India's first app that helps you pre-order from local favourite food shops –
+        beat the crowd, skip the noise, and save your time.  
         This app is for both customers and shop owners.
       </p>
-    </div>
-    <div class="about-image">
-      <a href="https://ibb.co/WWFhMwHB"><img src="https://i.ibb.co/C5vcYZwV/1757063922403.png" alt="1757063922403" border="0"></a>" alt="About Nearbase">
-    </div>
+    
   </section>
 
-  <!-- Problems Section -->
+  <!-- Problems -->
   <section id="problems" class="problems">
-    <h2 class="section-heading primary">The Everyday Struggle</h2>
-    <p class="section-desc">Eating out sounds fun, but here’s what really happens…</p>
-    <div class="problem-boxes">
-      <div class="problem-box">
-        <h3 class="primary">Customer Problems</h3>
+    <h2 class="section-title">The Everyday Struggle</h2>
+    <p class="section-desc">Eating out sounds fun, but here's what really happens…</p>
+    <div class="problem-cards">
+      <div class="card">
+        <h3>Customers' Problems</h3>
         <ul>
-          <li>⏱ Long queues, peak hour delays</li>
-          <li>🔍 Hard to find best vendors</li>
-          <li>⏰ Shop timings unclear</li>
-          <li>😓 Noisy and crowded shops</li>
+          <li>Long queues, peak hour delays</li>
+          <li>Hard to find best vendors</li>
+          <li>Shop timing unclear</li>
+          <li>Noisy and crowded shops</li>
         </ul>
       </div>
-      <div class="problem-box">
-        <h3 class="primary">Vendor Problems</h3>
+      <div class="card">
+        <h3>Vendors' Problems</h3>
         <ul>
-          <li>📝 Slower service due to manual orders</li>
-          <li>📉 No record of sales or customers</li>
-          <li>🌐 Zero digital presence</li>
-          <li>🥺 Fewer orders, low reach</li>
+          <li>Slower service due to manual orders</li>
+          <li>No record of sales & customers</li>
+          <li>Zero digital presence</li>
+          <li>Not getting enough orders</li>
         </ul>
       </div>
     </div>
+    <div class="problem-images">
+      <a href="https://ibb.co/WWFhMwHB"><img src="https://i.ibb.co/C5vcYZwV/1757063922403.png" alt="1757063922403" border="0"></a>
+      <a href="https://ibb.co/KcpmkBZw"><img src="https://i.ibb.co/kVsMfzn1/1757063958040.png" alt="1757063958040" border="0"></a>
+    </div>
+    <p class="hook">The wait ends here. NearBase solves it all.</p>
   </section>
 
-  <!-- Solution Section -->
-  <section id="solution" class="solution">
-    <p class="hook">The wait ends here. Nearbase solves it all.</p>
-    <h2 class="primary">Our Solution</h2>
-    <p class="solution-text">
-      One app for both sides:  
-      Customers skip the wait, vendors grow smarter with digital orders and sales data.
+  <!-- Solutions -->
+  <section id="solutions" class="solutions">
+    <h2>Our Solution</h2>
+    <p>
+      One app for both sides: Customers skip the wait, Vendors grow smarter with
+      digital orders and sales data.
     </p>
     <div class="solution-images">
-      <img src="img/solution1.jpg" alt="Solution Image 1">
-      <img src="img/solution2.jpg" alt="Solution Image 2">
+      <a href="https://ibb.co/TDSkzyZK"><img src="https://i.ibb.co/V0ZtX6dH/1757063713729.png" alt="1757063713729" border="0"></a>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <h2 class="primary">Customer Features</h2>
+  <!-- Customers -->
+  <section id="customers" class="features">
+    <h2>Customer Features</h2>
     <div class="feature-grid">
-      <div class="feature-box">
+      <div class="feature-card">
         <h3>Skip the Wait</h3>
         <p>Pre-order food and pick it up without waiting.</p>
       </div>
-      <div class="feature-box">
+      <div class="feature-card">
         <h3>All Vendors at One Place</h3>
-        <p>Discover nearby shops and their details instantly.</p>
+        <p>Discover nearby shops with all details at one place.</p>
       </div>
-      <div class="feature-box">
+      <div class="feature-card">
         <h3>Live Shop Details</h3>
-        <p>Check timings and availability before stepping out.</p>
+        <p>Check timing, status & availability before stepping out.</p>
       </div>
-      <div class="feature-box">
+      <div class="feature-card">
         <h3>Easy Ordering</h3>
-        <p>Place orders in a few clicks. Stay updated and notified.</p>
+        <p>Place orders in a few clicks. Stay updated & notified.</p>
       </div>
     </div>
+  </section>
 
-    <h2 class="primary vendor-heading">Vendor Features</h2>
+  <!-- Vendors -->
+  <section id="vendors" class="features">
+    <h2>Vendor Features</h2>
     <div class="feature-grid">
-      <div class="feature-box">
+      <div class="feature-card">
         <h3>Digitalise Your Shop</h3>
-        <p>Bring your business online and showcase it to a wider audience.</p>
+        <p>Bring your business online & reach wider audience.</p>
       </div>
-      <div class="feature-box">
+      <div class="feature-card">
         <h3>Get More Orders</h3>
-        <p>Attract more customers with the pre-order system.</p>
+        <p>Attract more customers through pre-order system.</p>
       </div>
-      <div class="feature-box">
+      <div class="feature-card">
         <h3>Analytics & Dashboard</h3>
-        <p>Track sales, customers, and growth in one place.</p>
+        <p>Track customer data and monitor your shop’s growth.</p>
       </div>
-      <div class="feature-box">
-        <h3>Common Tools</h3>
-        <p>Set timings, manage reviews, upload offers & product lists.</p>
+      <div class="feature-card">
+        <h3>Common Features</h3>
+        <p>Set shop timing, manage offers, upload menus & get reviews.</p>
       </div>
     </div>
   </section>
 
-  <!-- Coming Soon Section -->
-  <section class="coming">
-    <img src="img/coming.jpg" alt="Coming Soon">
-    <p class="coming-text primary">Coming in your area this October. Stay tuned!</p>
+  <!-- Coming Soon -->
+    <h2>Coming in your area in October. Soon.</h2>
   </section>
 
-  <!-- Footer -->
+  <!-- Contact -->
   <footer id="contact" class="footer">
-    <p>Contact us: nearbase@example.com</p>
-    <p>Follow us on social media (links coming soon)</p>
+    <h2>About Us</h2>
+    <p>Email: contact@nearbase.com</p>
+    <p>Follow us on social media</p>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p class="copy">© 2025 NearBase. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
