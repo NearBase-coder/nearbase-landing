@@ -4,6 +4,7 @@ const navLinks = document.getElementById("nav-links");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
+  hamburger.classList.toggle("active"); // ye hamburger icon ko X banane ke liye
 });
 
 // Scroll animation
