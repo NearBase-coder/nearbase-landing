@@ -15,13 +15,14 @@ body {
   color: var(--text-color);
   line-height: 1.6;
 }
-
 h1, h2, h3 {
-  margin: 0 0 10px; /* Reduced margin */
-}
+  text-align: center;            /* Center me sab headings */
+  color: var(--primary-color);   /* Primary color */
+  font-weight: bold;             /* Strong look */
+  margin: 15px 0;   
 
 section {
-  padding: 40px 20px; /* Reduced padding for a more compact feel */
+  padding: 20px 15px; /* Reduced padding for a more compact feel */
 }
 
 .container {
