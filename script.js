@@ -22,3 +22,9 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach(section => {
   observer.observe(section);
 });
+document.querySelectorAll(".faq-question").forEach(question => {
+  question.addEventListener("click", () => {
+    const item = question.parentElement;
+    item.classList.toggle("active");
+  });
+});
