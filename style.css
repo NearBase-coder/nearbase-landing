@@ -235,7 +235,7 @@ img {
 }
 
 .coming-soon {
-  background: #ff6b22;
+  background: var(--primary-color);
   display: inline-block;
   padding: 12px 25px;
   color: #ff6b22;
