@@ -233,25 +233,20 @@ img {
   font-size: clamp(1rem, 3vw, 1.4rem);
   margin: 10px 0 20px;
 }
-.coming-soon {
-  position: absolute;      /* sits on top of your hero image */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.coming-box {
+  background: #ff6b22;
   color: #fff;
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  animation: fadeSlide 2s infinite;
-  z-index: 2; /* ensures it's above any overlay */
+  letter-spacing: 2px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  animation: pulse 1.8s infinite, float 3s ease-in-out infinite;
+  text-align: center;
 }
 
-@keyframes fadeSlide {
-  0% { opacity: 0; transform: translate(-50%, -40%); }
-  50% { opacity: 1; transform: translate(-50%, -50%); }
-  100% { opacity: 0; transform: translate(-50%, -60%); }
-}
 
 
 /* About */
