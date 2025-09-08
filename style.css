@@ -99,6 +99,25 @@ img {
 .card, .button {
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
 }
+/* Google Translate Dropdown Styling */
+#google_translate_element {
+  text-align: right;   /* right side me dikhane ke liye */
+  margin: 10px 20px;
+}
+
+.goog-te-gadget {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.goog-te-combo {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+}
 
 /* Navbar */
 .navbar {
