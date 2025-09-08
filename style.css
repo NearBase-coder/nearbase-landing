@@ -234,17 +234,6 @@ img {
   margin: 10px 0 20px;
 }
 
-.coming-soon {
-  background: #FFA500;
-  display: inline-block;
-  padding: 12px 25px;
-  color: #FFFFFF;
-  border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  animation: bounceIn 1s ease-out;
-}
 
 /* About */
 .about {
