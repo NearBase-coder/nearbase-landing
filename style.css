@@ -233,6 +233,25 @@ img {
   font-size: clamp(1rem, 3vw, 1.4rem);
   margin: 10px 0 20px;
 }
+.coming-soon {
+  position: absolute;      /* sits on top of your hero image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  animation: fadeSlide 2s infinite;
+  z-index: 2; /* ensures it's above any overlay */
+}
+
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translate(-50%, -40%); }
+  50% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -60%); }
+}
 
 
 /* About */
