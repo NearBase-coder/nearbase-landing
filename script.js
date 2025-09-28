@@ -1,30 +1,12 @@
-// Hamburger menu toggle
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("nav-links");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-  hamburger.classList.toggle("active"); // ye hamburger icon ko X banane ke liye
-});
-
-// Scroll animation
-const sections = document.querySelectorAll("section, .feature-card, .card");
-const options = { threshold: 0.2 };
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-}, options);
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-document.querySelectorAll(".faq-question").forEach(question => {
-  question.addEventListener("click", () => {
-    const item = question.parentElement;
-    item.classList.toggle("active");
-  });
+// Ultra-Pro Hero Vanta Dots with subtle particle motion
+VANTA.DOTS({
+  el: "#hero",
+  mouseControls: true,
+  touchControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.0,
+  color: 0x2563eb,
+  color2: 0xff2b22,
+  backgroundColor: 0xffffff
 });
