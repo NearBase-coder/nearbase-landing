@@ -1,92 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NEARBASE Ultra-Pro</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NearBase</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="three.r134.min.js"></script>
+  <script src="vanta.dots.min.js"></script>
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <header id="hero">
-    <div class="hero-content">
-      <h1 class="main-title animate-text">NEARBASE</h1>
-      <p class="tagline animate-text delay1">Skip the Wait, Enjoy the Taste</p>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">NearBase</div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
     </div>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#problems">Problems</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#customers">Customers</a>
+      <a href="#vendors">Vendors</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2 class="fade-in">What is Nearbase?</h2>
-    <p class="fade-in delay1">Nearbase connects customers with local businesses seamlessly, bringing convenience and trust to your fingertips.</p>
-  </section>
-
-  <!-- Problem Section -->
-  <section id="problem">
-    <h2>The Problem</h2>
-    <p>Customers face delays, lack of transparency, and difficulties in accessing nearby trusted shops.</p>
-  </section>
-
-  <!-- Solution Section -->
-  <section id="solution">
-    <h2>Our Solution</h2>
-    <div class="solution-box">
-      <div class="solution-image fire-border">[Image 1]</div>
-      <p>Quick and reliable service at your doorstep.</p>
-    </div>
-    <div class="solution-box">
-      <div class="solution-image fire-border">[Image 2]</div>
-      <p>Verified vendors and smooth digital experience.</p>
+  <!-- Hero -->
+  <section id="home" class="hero" >
+    <div id="vanta-bg"></div>
+    <div class="hero-content">
+      <h1>NearBase</h1>
+      <p class="tagline">Skip the wait, enjoy the taste</p>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features">
-    <h2>Nearbase Features</h2>
-    <div class="feature-cards">
-      <div class="feature-card">
-        <div class="circle-img fire-border">[Customer Img]</div>
-        <h3>For Customers</h3>
-        <p>Search, compare, and connect with local shops easily.</p>
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About NearBase App</h2>
+      <p>
+        India's first app that helps you pre-order from local favourite food shops – beat the crowd, skip the noise, and save your time.  
+        This app is for both customers and shop owners. Customers can pre-order their favorite meals from nearby shops, avoid waiting, and enjoy fresh food on time. Vendors get a simple way to go digital, manage pre-orders, and serve more customers smoothly.
+      </p>
+    </div>
+  </section>
+
+  <!-- Problems -->
+  <section id="problems" class="problems">
+    <h2 class="section-title">The Everyday Struggle</h2>
+    <p class="section-desc">Eating out sounds fun, but here's what really happens…</p>
+    <div class="problem-cards">
+      <div class="card electric-border">
+        <img src="https://i.postimg.cc/SNT96Pwc/IMG-20250906-WA0014.jpg" alt="Customers Problem">
+        <h3>Customers' Problems</h3>
+        <ul>
+          <li>Long queues, peak hour delays</li>
+          <li>Hard to find best vendors</li>
+          <li>Shop timing unclear</li>
+          <li>Noisy and crowded shops</li>
+        </ul>
       </div>
-      <div class="feature-card">
-        <div class="circle-img fire-border">[Vendor Img]</div>
-        <h3>For Vendors</h3>
-        <p>Boost reach, manage shops, and grow your business.</p>
+      <div class="card electric-border">
+        <img src="https://i.ibb.co/Mmjg3m5/IMG-20250906-165451.jpg" alt="Vendors Problem">
+        <h3>Vendors' Problems</h3>
+        <ul>
+          <li>Slower service due to manual orders</li>
+          <li>No record of sales & customers</li>
+          <li>Zero digital presence</li>
+          <li>Not getting enough orders</li>
+        </ul>
+      </div>
+    </div>
+    <p class="hook">The wait ends here. NearBase solves it all.</p>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions" class="solutions">
+    <h2 class="section-title">Our Solution</h2>
+    <p class="section-desc">
+      One app for both sides: Customers skip the wait, Vendors grow smarter with digital orders and sales data.
+    </p>
+    <div class="solution-images">
+      <div class="solution-image fire-border"><img src="https://i.ibb.co/Y7ZFbDQH/file-00000000d1e061fd9f17f8ba24c51f8b.png" alt="Solution 1"></div>
+      <div class="solution-image fire-border"><img src="https://i.ibb.co/vCjWD3mT/file-00000000fd0861faaa890a1b09becbf2.png" alt="Solution 2"></div>
+    </div>
+  </section>
+
+  <!-- Customer Features -->
+  <section id="customers" class="features">
+    <h2 class="section-title">Customer Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card fire-border">
+        <div class="feature-icon">⏰</div>
+        <h3>Skip the Wait</h3>
+        <p>Pre-order food and pick it up without waiting.</p>
+      </div>
+      <div class="feature-card fire-border">
+        <div class="feature-icon">📍</div>
+        <h3>All Vendors at One Place</h3>
+        <p>Discover nearby shops with all details at one place.</p>
+      </div>
+      <div class="feature-card fire-border">
+        <div class="feature-icon">📊</div>
+        <h3>Live Shop Details</h3>
+        <p>Check timing, status & availability before stepping out.</p>
+      </div>
+      <div class="feature-card fire-border">
+        <div class="feature-icon">🛒</div>
+        <h3>Easy Ordering</h3>
+        <p>Place orders in a few clicks. Stay updated & notified.</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section id="faq">
-    <h2>FAQs</h2>
-    <div class="faq-card">
-      <h4>How does Nearbase work?</h4>
-      <p>Nearbase connects you with verified shops around you in just a few clicks.</p>
-    </div>
-    <div class="faq-card">
-      <h4>Is it free to use?</h4>
-      <p>Yes, customers can use Nearbase for free.</p>
+  <!-- Vendor Features -->
+  <section id="vendors" class="features">
+    <h2 class="section-title">Vendor Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card fire-border">
+        <div class="feature-icon">💻</div>
+        <h3>Digitalise Your Shop</h3>
+        <p>Bring your business online & reach wider audience.</p>
+      </div>
+      <div class="feature-card fire-border">
+        <div class="feature-icon">⚡</div>
+        <h3>Get More Orders</h3>
+        <p>Attract more customers through pre-order system.</p>
+      </div>
+      <div class="feature-card fire-border">
+        <div class="feature-icon">📊</div>
+        <h3>Analytics & Dashboard</h3>
+        <p>Track customer data and monitor your shop’s growth.</p>
+      </div>
+      <div class="feature-card fire-border">
+        <div class="feature-icon">🔧</div>
+        <h3>Common Features</h3>
+        <p>Set shop timing, manage offers, upload menus & get reviews.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Coming Soon Section -->
-  <section id="coming-soon">
-    <div class="scrolling-text">
-      <span>🚀 Coming Soon 🚀 Coming Soon 🚀 Coming Soon 🚀 Coming Soon 🚀</span>
+  <!-- Coming Soon -->
+  <section class="coming-soon">
+    <div class="coming-text">Coming Soon</div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">What is NearBase?</div>
+      <div class="faq-answer">NearBase is a smart platform that connects local vendors with customers for pre order and better visibility.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How does it work?</div>
+      <div class="faq-answer">Customers can find nearby food vendors instantly, while vendors can reach more customers through the app.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">When is it launching?</div>
+      <div class="faq-answer">NearBase is coming in October! Stay tuned for updates.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Where will it launch?</div>
+      <div class="faq-answer">NearBase will launch all over India, but initially it will start in Aligarh, UP (all local areas and city locations), and then expand to other cities.</div>
     </div>
   </section>
 
-  <!-- About Us Section -->
-  <section id="about-us">
-    <h2 class="fade-in">About Us</h2>
-    <p class="fade-in delay1">We are on a mission to digitize local commerce and empower small businesses.</p>
-  </section>
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <h2>About Us</h2>
+    <p>📧 <a href="mailto:nearbase.team@gmail.com">nearbase.team@gmail.com</a></p>
+    <p>Follow us on social media</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/nearbaseapp?igsh=dnF3amdzOGZkN21x" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/share/1BEQ8yztdW/" target="_blank">Facebook</a>
+    </div>
+    <p class="copy">© 2025 NearBase. All rights reserved.</p>
+  </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.dots.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
+
