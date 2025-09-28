@@ -1,7 +1,7 @@
-// (KEEP THIS FILE THE SAME AS THE PREVIOUS VERSION)
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. Vanta.js Hero BG Initialization ---
+    // Note: The Vanta.js and three.js scripts must be loaded in index.html for this to work.
     try {
         VANTA.DOTS({
             el: "#hero-bg", 
@@ -30,9 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+            // Prevent scrolling when mobile menu is open
             document.body.classList.toggle('no-scroll'); 
         });
 
+        // Close menu when a link is clicked (for smooth single-page navigation)
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -43,16 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- 3. FAQ Section Toggle ---
+    // --- 3. FAQ Section Toggle (Collapsible Answers) ---
     const faqQuestions = document.querySelectorAll('.faq-question');
 
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
             const answer = question.nextElementSibling;
             
+            // Toggle active class on the question to change the '+' icon to 'X' (CSS handles this)
             question.classList.toggle('active');
+            
+            // Toggle the clicked answer (CSS handles max-height and padding)
             answer.classList.toggle('active');
 
+            // Optional: Close other open answers (for an accordion effect)
             document.querySelectorAll('.faq-answer.active').forEach(openAnswer => {
                 if (openAnswer !== answer) {
                     openAnswer.classList.remove('active');
@@ -69,37 +75,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
+            // Remove 'active' from all buttons and content
             tabButtons.forEach(btn => btn.classList.remove('active'));
             featureContents.forEach(content => content.classList.remove('active'));
 
+            // Add 'active' to the clicked button
             button.classList.add('active');
 
-            const targetTab = button.dataset.tab;
+            // Show the corresponding content
+            const targetTab = button.dataset.tab; // 'customers' or 'vendors'
             document.getElementById(`${targetTab}-content`).classList.add('active');
 
+            // Re-observe elements for animation if new content is shown
             const newlyActiveCards = document.querySelectorAll(`#${targetTab}-content .scroll-animate`);
             newlyActiveCards.forEach(card => {
-                card.classList.remove('is-visible');
+                card.classList.remove('is-visible'); // Reset animation state
                 scrollObserver.observe(card);
             });
         });
     });
 
+    // --- 5. Feature Card Icon 'Jump' on Click ---
+    // This addresses your request for icons moving up on click (or tapping on mobile).
+    const featureIcons = document.querySelectorAll('.feature-card .feature-icon');
 
-    // --- 5. Scroll-Triggered Animations (IntersectionObserver) ---
+    featureIcons.forEach(icon => {
+        icon.addEventListener('mousedown', (e) => {
+             // For desktop (mouse click)
+             icon.style.transform = 'translateY(-10px) scale(1.1)'; 
+        });
+        icon.addEventListener('mouseup', (e) => {
+             // Return to normal (using the CSS transition)
+             icon.style.transform = 'translateY(0) scale(1)'; 
+        });
+         icon.addEventListener('mouseleave', (e) => {
+             // Ensure it returns to normal if mouse leaves while pressed
+             icon.style.transform = 'translateY(0) scale(1)'; 
+        });
+
+        // Add touch support for mobile taps
+        icon.addEventListener('touchstart', (e) => {
+             icon.style.transform = 'translateY(-10px) scale(1.1)'; 
+        });
+        icon.addEventListener('touchend', (e) => {
+             // Use a short delay before returning to normal
+             setTimeout(() => {
+                icon.style.transform = 'translateY(0) scale(1)'; 
+             }, 200);
+        });
+    });
+
+
+    // --- 6. Scroll-Triggered Animations (IntersectionObserver) ---
     const animateElements = document.querySelectorAll('.scroll-animate');
 
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0.1 // Trigger when 10% of the element is visible
     };
 
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
+                // Only unobserve if you want the animation to play once
+                observer.unobserve(entry.target); 
             }
         });
     };
