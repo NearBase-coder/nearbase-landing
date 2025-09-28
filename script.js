@@ -69,7 +69,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- 4. Scroll-Triggered Animations (IntersectionObserver) ---
+    // --- 4. Feature Tabs Logic (Customer/Vendor) ---
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const featureContents = document.querySelectorAll('.feature-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove 'active' from all buttons and content
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            featureContents.forEach(content => content.classList.remove('active'));
+
+            // Add 'active' to the clicked button
+            button.classList.add('active');
+
+            // Show the corresponding content
+            const targetTab = button.dataset.tab; // 'customers' or 'vendors'
+            document.getElementById(`${targetTab}-content`).classList.add('active');
+
+            // Re-observe elements for animation if new content is shown
+            const newlyActiveCards = document.querySelectorAll(`#${targetTab}-content .scroll-animate`);
+            newlyActiveCards.forEach(card => {
+                card.classList.remove('is-visible'); // Reset animation state
+                scrollObserver.observe(card);
+            });
+        });
+    });
+
+
+    // --- 5. Scroll-Triggered Animations (IntersectionObserver) ---
     const animateElements = document.querySelectorAll('.scroll-animate');
 
     const observerOptions = {
@@ -82,7 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // Stop observing once visible
+                // Only unobserve if you want the animation to play once
+                // If you want it to re-play every time it comes into view, remove this line
+                observer.unobserve(entry.target); 
+            } else {
+                // Optional: remove 'is-visible' when element leaves view
+                // entry.target.classList.remove('is-visible'); 
             }
         });
     };
