@@ -7,8 +7,8 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 
-/* ===== Scroll Animation ===== */
-const scrollElements = document.querySelectorAll(".card, .feature-card, .about-text, .solution-image");
+/* ===== Scroll Animations ===== */
+const scrollElements = document.querySelectorAll(".card, .feature-card, .about-text, .solution-images img");
 const observerOptions = { threshold: 0.2 };
 const scrollObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -20,26 +20,24 @@ const scrollObserver = new IntersectionObserver((entries) => {
 scrollElements.forEach(el => scrollObserver.observe(el));
 
 /* ===== FAQ Toggle ===== */
-const faqQuestions = document.querySelectorAll(".faq-question");
-faqQuestions.forEach(q => {
+document.querySelectorAll(".faq-question").forEach(q => {
   q.addEventListener("click", () => {
-    const parent = q.parentElement;
-    parent.classList.toggle("active");
+    q.parentElement.classList.toggle("active");
   });
 });
 
-/* ===== Vanta Hero Background ===== */
+/* ===== VANTA HERO DOTS ===== */
 VANTA.DOTS({
-  el: "#vanta-bg",
+  el: "#home",
   mouseControls: true,
   touchControls: true,
-  minHeight: 200.00,
+  minHeight: 500.00,
   minWidth: 200.00,
   scale: 1.0,
   scaleMobile: 1.0,
-  color: 0xff6b22,
-  color2: 0x2563eb,
-  backgroundColor: 0x111827,
+  color: 0xFF2B22,
+  color2: 0x2563EB,
+  backgroundColor: 0xFFFFFF,
   size: 4.0,
   spacing: 20.0,
   showLines: true
