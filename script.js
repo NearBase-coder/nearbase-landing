@@ -21,13 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn("Vanta.js initialization failed. Check script links in HTML.");
     }
 
-const ham = document.getElementById("hamburger");
-const nav = document.getElementById("nav-links");
 
-ham.addEventListener("click", () => {
-    ham.classList.toggle("active");
-    nav.classList.toggle("open");
-});
+    // --- 2. Hamburger Menu Toggle ---
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            // Prevent scrolling when mobile menu is open
+            document.body.classList.toggle('no-scroll'); 
+        });
 
         // Close menu when a link is clicked (for smooth single-page navigation)
         navLinks.querySelectorAll('a').forEach(link => {
@@ -146,9 +151,4 @@ ham.addEventListener("click", () => {
         scrollObserver.observe(element);
     });
 
-});
-function scrollToDownload() {
-    document.getElementById("download").scrollIntoView({
-        behavior: "smooth"
-    });
-}
+}); 
