@@ -568,72 +568,66 @@ p.section-desc {
     padding: 18px 25px;
 }
 
-/* --- Download Section (Updated BG with Floating Icons) --- */
-.download-section {
+/* --- 9. Coming Soon Section (Updated BG with Floating Icons) --- */
+.coming-soon {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, var(--secondary-color), #0f3d91);
+    background: linear-gradient(135deg, var(--secondary-color), #0f3d91); /* Deep Blue Gradient BG */
     box-shadow: var(--shadow-medium);
     border-radius: 16px;
-    overflow: hidden;
+    overflow: hidden; 
     position: relative;
 }
-
-/* Title */
-.download-text {
+.coming-soon .coming-text {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
-    color: white;
+    color: white; 
     margin-top: 20px;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
     z-index: 2;
     position: relative;
 }
 
-/* Download Button */
-.download-btn {
-    margin-top: 25px;
-    display: inline-block;
-    padding: 16px 34px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #fff;
-    background: var(--primary-color);
-    border-radius: 12px;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transition: 0.25s ease;
-    position: relative;
-    z-index: 2;
+/* Floating Icons Container */
+.coming-soon-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
 }
 
-.download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+.coming-soon-icons span {
+    position: absolute;
+    display: block;
+    font-size: 30px;
+    opacity: 0.6;
+    animation: floatIcon 15s linear infinite;
 }
 
-/* Downward Floating Icons */
-@keyframes floatDown {
+/* Individual Icon Positioning and Delay for variety */
+.coming-soon-icons span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.coming-soon-icons span:nth-child(2) { left: 30%; animation-delay: 3s; font-size: 40px; }
+.coming-soon-icons span:nth-child(3) { left: 50%; animation-delay: 6s; }
+.coming-soon-icons span:nth-child(4) { left: 70%; animation-delay: 9s; font-size: 35px; }
+.coming-soon-icons span:nth-child(5) { left: 90%; animation-delay: 12s; }
+
+
+@keyframes floatIcon {
     0% {
-        transform: translateY(-35px);
-        opacity: 0.7;
+        transform: translateY(100vh) scale(0);
+        opacity: 0.2;
     }
     50% {
-        transform: translateY(5px);
-        opacity: 1;
+        opacity: 0.8;
     }
     100% {
-        transform: translateY(35px);
-        opacity: 0.5;
+        transform: translateY(-50vh) scale(1.5);
+        opacity: 0;
     }
-}
-
-.floating-icon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    opacity: 0.75;
-    animation: floatDown 4s infinite ease-in-out;
 }
 
 
