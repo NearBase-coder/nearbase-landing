@@ -1,198 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NearBase</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NearBase</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
 </head>
 <body>
-    <header class="navbar sticky">
-        <div class="logo"><a href="#home">NearBase</a></div>
-        <div class="hamburger" id="hamburger">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+<header class="navbar sticky">
+<div class="logo"><a href="#home">NearBase</a></div>
+<div class="hamburger" id="hamburger">
+<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+</div>
+<nav class="nav-links" id="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#problems">Problems</a>
+<a href="#solutions">Solutions</a>
+<a href="#features-tab">Features</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section id="hero-bg" class="hero full-screen">
+        <div class="hero-moving-text">
+            <span>Skip the wait, enjoy the taste — Coming Soon — </span>
+            <span>Skip the wait, enjoy the taste — Coming Soon — </span>
         </div>
-        <nav class="nav-links" id="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#problems">Problems</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#features-tab">Features</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+        <div class="hero-overlay-animation"></div>
+<div class="hero-content">
+<h1>NearBase</h1>
+<p class="tagline">Skip the wait, enjoy the taste</p>
+</div>
+        <div class="hero-overlay-animation"></div>
+</section>
+<section id="about" class="about section-card scroll-animate">
+<div class="about-text">
+<h2>About NearBase App</h2>
+<p>
+India's first app that helps you pre-order from local favourite food shops – beat the crowd, skip the noise, and save your time. 
+This app is for both customers and shop owners. Customers can pre-order their favorite meals from nearby shops, avoid waiting, and enjoy fresh food on time. Vendors get a simple way to go digital, manage pre-orders, and serve more customers smoothly.
+</p>
+</div>
+</section>
 
-   <section class="hero" id="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">NearBase</h1>
-        <p class="hero-tagline">Skip the wait, enjoy the taste</p>
+<section id="problems" class="problems">
+<h2 class="section-title scroll-animate">The Everyday Struggle</h2>
+<p class="section-desc scroll-animate">Eating out sounds fun, but here's what really happens…</p>
+<div class="problem-cards problems-grid">
+<div class="card scroll-animate problem-card-animated-border">
+<img src="https://i.postimg.cc/SNT96Pwc/IMG-20250906-WA0014.jpg" alt="Customers Problem">
+<h3>Customers' Problems</h3>
+<ul>
+<li>Long queues, peak hour delays</li>
+<li>Hard to find best vendors</li>
+<li>Shop timing unclear</li>
+<li>Noisy and crowded shops</li>
+</ul>
+</div>
+<div class="card scroll-animate problem-card-animated-border">
+<img src="https://i.ibb.co/Mmjg3m5/IMG-20250906-165451.jpg" alt="Vendors Problem">
+<h3>Vendors' Problems</h3>
+<ul>
+<li>Slower service due to manual orders</li>
+<li>No record of sales & customers</li>
+<li>Zero digital presence</li>
+<li>Not getting enough orders</li>
+</ul>
+</div>
+</div>
+<p class="hook scroll-animate">The wait ends here. NearBase solves it all.</p>
+</section>
+<section id="solutions" class="solutions section-card scroll-animate">
+<h2 class="section-title">Our Solution</h2>
+<p class="section-desc">
+One app for both sides: Customers skip the wait, Vendors grow smarter with digital orders and sales data.
+</p>
+<div class="solution-images solutions-content">
+<div class="solution-image-container scroll-animate">
+<img src="https://i.ibb.co/Y7ZFbDQH/file-00000000d1e061fd9f17f8ba24c51f8b.png" alt="Solution 1">
+</div>
+<div class="solution-image-container scroll-animate">
+<img src="https://i.ibb.co/vCjWD3mT/file-00000000fd0861faaa890a1b09becbf2.png" alt="Solution 2">
+</div>
+</div>
+</section>
 
-        <button class="hero-btn" onclick="scrollToDownload()">
-            Download Now
-        </button>
+<section id="features-tab" class="features section-card scroll-animate">
+<h2 class="section-title">App Features</h2>
+<div class="feature-tabs">
+<button class="tab-button active" data-tab="customers">Customer Features</button>
+<button class="tab-button" data-tab="vendors">Vendor Features</button>
+</div>
+
+<div id="customers-content" class="feature-content active">
+<div class="feature-grid">
+<div class="feature-card card scroll-animate">
+<div class="feature-icon">⏰</div>
+<h3>Skip the Wait</h3>
+<p>Pre-order food and pick it up without waiting.</p>
+</div>
+<div class="feature-card card scroll-animate">
+<div class="feature-icon">📍</div>
+<h3>All Vendors at One Place</h3>
+<p>Discover nearby shops with all details at one place.</p>
+</div>
+<div class="feature-card card scroll-animate">
+<div class="feature-icon">📊</div>
+<h3>Live Shop Details</h3>
+<p>Check timing, status & availability before stepping out.</p>
+</div>
+<div class="feature-card card scroll-animate">
+<div class="feature-icon">🛒</div>
+<h3>Easy Ordering</h3>
+<p>Place orders in a few clicks. Stay updated & notified.</p>
+</div>
+</div>
+</div>
+
+<div id="vendors-content" class="feature-content">
+<div class="feature-grid">
+<div class="feature-card card scroll-animate">
+<div class="feature-icon">💻</div>
+<h3>Digitalise Your Shop</h3>
+<p>Bring your business online & reach wider audience.</p>
+</div>
+<div class="feature-card card scroll-animate">
+<div class="feature-icon">⚡</div>
+<h3>Get More Orders</h3>
+<p>Attract more customers through pre-order system.</p>
+</div>
+<div class="feature-card card scroll-animate">
+<div class="feature-icon">📊</div>
+<h3>Analytics & Dashboard</h3>
+<p>Track customer data and monitor your shop’s growth.</p>
+</div>
+<div class="feature-card card scroll-animate">
+<div class="feature-icon">🔧</div>
+<h3>Common Features</h3>
+<p>Set shop timing, manage offers, upload menus & get reviews.</p>
+</div>
+</div>
+</div>
+</section>
+<<section class="coming-soon section-card scroll-animate">
+    <div class="coming-soon-animation-container"></div>
+
+    <div class="coming-soon-icons">
+        <span>🍕</span>
+        <span>🍔</span>
+        <span>🍟</span>
+        <span>🍜</span>
+        <span>🥤</span>
     </div>
+
+    <!-- ⭐ NEW DIRECT APK DOWNLOAD BUTTON -->
+    <a href="nearbase.apk" download class="download-apk-btn">
+        Download NearBase App (APK)
+    </a>
 </section>
 
-    <section id="about" class="about section-card scroll-animate">
-        <div class="about-text">
-            <h2>About NearBase App</h2>
-            <p>
-                India's first app that helps you pre-order from local favourite food shops – beat the crowd, skip the noise, and save your time. 
-                This app is for both customers and shop owners. Customers can pre-order their favorite meals from nearby shops, avoid waiting, and enjoy fresh food on time. Vendors get a simple way to go digital, manage pre-orders, and serve more customers smoothly.
-            </p>
-        </div>
-    </section>
-
-    <section id="problems" class="problems">
-        <h2 class="section-title scroll-animate">The Everyday Struggle</h2>
-        <p class="section-desc scroll-animate">Eating out sounds fun, but here's what really happens…</p>
-        <div class="problem-cards problems-grid">
-            <div class="card scroll-animate problem-card-animated-border">
-                <img src="https://i.postimg.cc/SNT96Pwc/IMG-20250906-WA0014.jpg" alt="Customers Problem">
-                <h3>Customers' Problems</h3>
-                <ul>
-                    <li>Long queues, peak hour delays</li>
-                    <li>Hard to find best vendors</li>
-                    <li>Shop timing unclear</li>
-                    <li>Noisy and crowded shops</li>
-                </ul>
-            </div>
-            <div class="card scroll-animate problem-card-animated-border">
-                <img src="https://i.ibb.co/Mmjg3m5/IMG-20250906-165451.jpg" alt="Vendors Problem">
-                <h3>Vendors' Problems</h3>
-                <ul>
-                    <li>Slower service due to manual orders</li>
-                    <li>No record of sales & customers</li>
-                    <li>Zero digital presence</li>
-                    <li>Not getting enough orders</li>
-                </ul>
-            </div>
-        </div>
-        <p class="hook scroll-animate">The wait ends here. NearBase solves it all.</p>
-    </section>
-    <section id="solutions" class="solutions section-card scroll-animate">
-        <h2 class="section-title">Our Solution</h2>
-        <p class="section-desc">
-            One app for both sides: Customers skip the wait, Vendors grow smarter with digital orders and sales data.
-        </p>
-        <div class="solution-images solutions-content">
-            <div class="solution-image-container scroll-animate">
-                <img src="https://i.ibb.co/Y7ZFbDQH/file-00000000d1e061fd9f17f8ba24c51f8b.png" alt="Solution 1">
-            </div>
-            <div class="solution-image-container scroll-animate">
-                <img src="https://i.ibb.co/vCjWD3mT/file-00000000fd0861faaa890a1b09becbf2.png" alt="Solution 2">
-            </div>
-        </div>
-    </section>
-
-    <section id="features-tab" class="features section-card scroll-animate">
-        <h2 class="section-title">App Features</h2>
-        <div class="feature-tabs">
-            <button class="tab-button active" data-tab="customers">Customer Features</button>
-            <button class="tab-button" data-tab="vendors">Vendor Features</button>
-        </div>
-
-        <div id="customers-content" class="feature-content active">
-            <div class="feature-grid">
-                <div class="feature-card card scroll-animate">
-                    <div class="feature-icon">⏰</div>
-                    <h3>Skip the Wait</h3>
-                    <p>Pre-order food and pick it up without waiting.</p>
-                </div>
-                <div class="feature-card card scroll-animate">
-                    <div class="feature-icon">📍</div>
-                    <h3>All Vendors at One Place</h3>
-                    <p>Discover nearby shops with all details at one place.</p>
-                </div>
-                <div class="feature-card card scroll-animate">
-                    <div class="feature-icon">📊</div>
-                    <h3>Live Shop Details</h3>
-                    <p>Check timing, status & availability before stepping out.</p>
-                </div>
-                <div class="feature-card card scroll-animate">
-                    <div class="feature-icon">🛒</div>
-                    <h3>Easy Ordering</h3>
-                    <p>Place orders in a few clicks. Stay updated & notified.</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="vendors-content" class="feature-content">
-            <div class="feature-grid">
-                <div class="feature-card card scroll-animate">
-                    <div class="feature-icon">💻</div>
-                    <h3>Digitalise Your Shop</h3>
-                    <p>Bring your business online & reach wider audience.</p>
-                </div>
-                <div class="feature-card card scroll-animate">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Get More Orders</h3>
-                    <p>Attract more customers through pre-order system.</p>
-                </div>
-                <div class="feature-card card scroll-animate">
-                    <div class="feature-icon">📊</div>
-                    <h3>Analytics & Dashboard</h3>
-                    <p>Track customer data and monitor your shop’s growth.</p>
-                </div>
-                <div class="feature-card card scroll-animate">
-                    <div class="feature-icon">🔧</div>
-                    <h3>Common Features</h3>
-                    <p>Set shop timing, manage offers, upload menus & get reviews.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-<section class="download-section" id="download">
-    <h2 class="download-title">Download NearBase App</h2>
-
-    <a href="https://github.com/NearBase-coder/nearbase-landing/releases/download/v1.0/nearbase.apk" class="download-btn">Download APK</a>
+<section class="faq-container section-card scroll-animate">
+<h2 class="section-title">FAQ (Frequently Asked Questions)</h2>
+<div class="faq-item">
+<div class="faq-question">What is NearBase? <span class="faq-toggle-icon">+</span></div>
+<div class="faq-answer">NearBase is a smart platform that connects local vendors with customers for pre order and better visibility.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">How does it work? <span class="faq-toggle-icon">+</span></div>
+<div class="faq-answer">Customers can find nearby food vendors instantly, while vendors can reach more customers through the app.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">When is it launching? <span class="faq-toggle-icon">+</span></div>
+<div class="faq-answer">NearBase is coming in October! Stay tuned for updates.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Where will it launch? <span class="faq-toggle-icon">+</span></div>
+<div class="faq-answer">NearBase will launch all over India, but initially it will start in Aligarh, UP (all local areas and city locations), and then expand to other cities.</div>
+</div>
 </section>
 
+<footer id="contact" class="footer">
+<div class="footer-content">
+<div>
+<h2>NearBase</h2>
+<p>India's first pre-order app for local food.</p>
+</div>
+<div class="footer-links">
+<h4>Contact Us</h4>
+<p>📧 <a href="mailto:nearbase.team@gmail.com">nearbase.team@gmail.com</a></p>
+</div>
+<div class="social-links">
+<h4>Follow Us</h4>
+<a href="https://www.instagram.com/nearbaseapp?igsh=dnF3amdzOGZkN21x" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/share/1BEQ8yztdW/" target="_blank">Facebook</a>
+</div>
+</div>
+<p class="copy">© 2025 NearBase. All rights reserved.</p>
+</footer>
 
-    <section class="faq-container section-card scroll-animate">
-        <h2 class="section-title">FAQ (Frequently Asked Questions)</h2>
-        <div class="faq-item">
-            <div class="faq-question">What is NearBase? <span class="faq-toggle-icon">+</span></div>
-            <div class="faq-answer">NearBase is a smart platform that connects local vendors with customers for pre order and better visibility.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How does it work? <span class="faq-toggle-icon">+</span></div>
-            <div class="faq-answer">Customers can find nearby food vendors instantly, while vendors can reach more customers through the app.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Is NearBase available for download now? <span class="faq-toggle-icon">+</span></div>
-            <div class="faq-answer">Yes! NearBase has been officially released. You can download the APK directly from the website.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Where will it launch? <span class="faq-toggle-icon">+</span></div>
-            <div class="faq-answer">NearBase will launch all over India, but initially it will start in Aligarh, UP (all local areas and city locations), and then expand to other cities.</div>
-        </div>
-    </section>
-
-    <footer id="contact" class="footer">
-        <div class="footer-content">
-            <div>
-                <h2>NearBase</h2>
-                <p>India's first pre-order app for local food.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Contact Us</h4>
-                <p>📧 <a href="mailto:nearbase.team@gmail.com">nearbase.team@gmail.com</a></p>
-            </div>
-            <div class="social-links">
-                <h4>Follow Us</h4>
-                <a href="https://www.instagram.com/nearbaseapp?igsh=dnF3amdzOGZkN21x" target="_blank">Instagram</a>
-                <a href="https://www.facebook.com/share/1BEQ8yztdW/" target="_blank">Facebook</a>
-            </div>
-        </div>
-        <p class="copy">© 2025 NearBase. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
