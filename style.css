@@ -163,67 +163,29 @@ p.section-desc {
     transform: translateY(-10px) rotate(-45deg);
 }
 
-/* --- NEW HERO SECTION --- */
 .hero-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 120px 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: linear-gradient(135deg, #ff3131, #ff914d);
     overflow: hidden;
+    z-index: 1;
 }
 
-/* Food icons subtle moving background */
+/* background ko peeche bhejo */
 .hero-food-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://i.imgur.com/Wr7Q8eH.png'); /* FOOD ICON PNG (transparent) */
+    background-image: url('https://i.imgur.com/Wr7Q8eH.png');
     background-size: 300px;
     opacity: 0.12;
     animation: foodMove 18s infinite linear;
-}
-
-@keyframes foodMove {
-    0% { background-position: 0 0; }
-    100% { background-position: 800px 800px; }
-}
-
-.hero-title {
-    font-size: clamp(3.5rem, 7vw, 5.5rem);
-    font-weight: 900;
-    color: #fff;
-    z-index: 5;
-    text-shadow: 0px 6px 20px rgba(0,0,0,0.4);
-}
-
-.hero-tagline {
-    color: #fff;
-    margin-top: 10px;
-    font-size: 1.4rem;
-    font-weight: 500;
-    z-index: 5;
-    opacity: 0.95;
-}
-
-.hero-btn {
-    margin-top: 30px;
-    padding: 16px 45px;
-    background: white;
-    color: #ff3131;
-    font-weight: 700;
-    font-size: 1.3rem;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    transition: 0.3s ease-in-out;
-    z-index: 5;
-}
-
-.hero-btn:hover {
-    transform: translateY(-6px) scale(1.05);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    z-index: -1;
 }
 
 
@@ -611,13 +573,8 @@ p.section-desc {
 
 }
 
-.floating-icon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    opacity: 0.75;
-    animation: floatDown 4s infinite ease-in-out;
-}
+
+
 
 
 /* --- 10. Footer --- */
